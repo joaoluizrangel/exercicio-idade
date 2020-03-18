@@ -1,0 +1,53 @@
+package exe3;
+
+public class Exe3 {
+	//variaveis
+	String Nome;
+	String Sobrenome;
+	int AnoNascimento;
+	int AnoAtual;
+	int Idade;
+	
+	void Calculo(){ //calculando idade
+		Idade = AnoAtual-AnoNascimento;
+	}
+}
+
+------------------------------------------------------------------------------------------------
+
+package exe3;
+import java.util.*;
+public class ExeP3 {
+	public static void main (String [] args){
+		Scanner in = new Scanner(System.in);
+		
+			//Apresentando variaveis
+			int AnoNascimento, AnoAtual, Idade;
+			String Nome, Sobrenome;
+			
+			Exe3 Calc = new Exe3(); //instanciando
+			
+			System.out.println("Digite seu nome"); //pedindo nome
+			Calc.Nome= in.next();
+			
+			System.out.println("Digite seu sobrenome"); //pedindo sobrenome
+			Calc.Sobrenome= in.next();
+			
+			System.out.println("Digite o ano de nascimento"); //pedindo o ano de nascimento
+			Calc.AnoNascimento= in.nextInt();
+			
+			System.out.println("Digite o ano atual"); //pedindo o ano atual
+			Calc.AnoAtual= in.nextInt();
+			
+			Calc.Calculo(); //calculando idade
+			
+			System.out.println(""); //espaço só
+			
+			//apresentando nome, sobrenome e idade
+			System.out.println("Seu nome é: " +Calc.Nome); 
+			System.out.println("Seu sobrenome é: " +Calc.Sobrenome);
+			System.out.println("Você tem: " +Calc.Idade+ " anos");
+	}
+}
+
+----------------------------------------------------------------------------------------------------------------------
